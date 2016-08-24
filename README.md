@@ -1,52 +1,24 @@
->## A Big Update Is Coming
+Setup and Run:
+1. npm install --production (make sure to include 'production' tag)
+2. npm start 
+3. App is served to 127.0.0.1:8080
+NOTE: 2a. If npm start does not point to the correct http-server module directory
+        -> Install http-server globally: npm install -g http-server 
+        -> Run http-server: http-server
 
->React Hot Loader 3 is [on the horizon](https://github.com/gaearon/react-hot-loader/pull/240), and you can try it today ([boilerplate branch](https://github.com/gaearon/react-hot-boilerplate/pull/61), [upgrade example](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915)). It fixes some [long-standing issues](https://twitter.com/dan_abramov/status/722040946075045888) with both React Hot Loader and React Transform, and is intended as a replacement for both. The docs are not there yet, but they will be added before the final release. For now, [this commit](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915) is a good reference.
+Write-up:
+While browsing your site I found that your Particle Build control panel is a basic version of the skill test prompt. My project aims to match the look of the control panel and extend its functionality to include the four Particle API endpoints specified.
 
+I found it very easy and fun to be able to drop in your existing style elements using Bourbon + Neat. I have already realized the ease of Redux's data flow and REALLY enjoyed using native javascript to produce UI elements. Particle's JS API was great to work with and I was pleasantly surprised by the super-clean codebase and the size of the community. 
 
-React Hot Boilerplate
-=====================
+The only hiccup was trying to use Particle.callFunction(). It was the only endpoint specified that required passing arguments (broken in Particle-api-js v6.0.0). After a bit of bewilderment, I tried a previous version and only then found the closed issue calling out the flaw. On the bright side, I got to dig into and familiarize myself with the codebase while searching for the bug.
 
-The minimal dev environment to enable live-editing React components.
+If I had more time to devote to this project I would break down the components, especially DeviceInfoVar and DeviceInfoFunc. I would definitely refactor my code to follow a style guide, as I'm not too happy about my current code style, especially some of the element iterators in my render functions. At this point I think I have the infrastructure set up to make implementing all of the remaining API features trivial, and it would be great to implement "Product" API functionality as well.
 
-### Usage
+In the office is there much interaction between the hardware and software developers? It would be great to see my work put into action on the spot and to have a flow of ideas and feedback from the hardware side. Your product is so open-ended, do you encourage/ enable employees to come up with ideas to demonstrate its capabilities (hackathons, demonstrations, etc)? What are your biggest projects at the moment, and would the majority of my work be on new features or supporting existing systems?
 
-```
-npm install
-npm start
-open http://localhost:3000
-```
+After seeing how neat the Particle-API-JS source is, I'd love to jump in and make some contributions. Would you be willing to setup another mock account so I can setup devices and products for testing my changes? 
 
-Now edit `src/App.js`.  
-Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
+Thanks for taking the time to check out my submission, and I look forward to chatting.
 
-### Linting
-
-This boilerplate project includes React-friendly ESLint configuration.
-
-```
-npm run lint
-```
-
-### Using `0.0.0.0` as Host
-
-You may want to change the host in `server.js` and `webpack.config.js` from `localhost` to `0.0.0.0` to allow access from same WiFi network. This is not enabled by default because it is reported to cause problems on Windows. This may also be useful if you're using a VM.
-
-### Missing Features
-
-This boilerplate is purposefully simple to show the minimal configuration for React Hot Loader. For a real project, you'll want to add a separate config for production with hot reloading disabled and minification enabled. You'll also want to add a router, styles and maybe combine dev server with an existing server. This is out of scope of this boilerplate, but you may want to look into [other starter kits](https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits).
-
-### Dependencies
-
-* React
-* Webpack
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [babel-loader](https://github.com/babel/babel-loader)
-* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-
-### Resources
-
-* [Demo video](http://vimeo.com/100010922)
-* [react-hot-loader on Github](https://github.com/gaearon/react-hot-loader)
-* [Integrating JSX live reload into your workflow](http://gaearon.github.io/react-hot-loader/getstarted/)
-* [Troubleshooting guide](https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md)
-* Ping dan_abramov on Twitter or #reactjs IRC
+- Tyler

@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
   sassLoader: {
     includePaths: bourbonIncludes.concat(bourbonNeatIncludes)
@@ -37,6 +37,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css!sass')
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
       }
     ],
   }

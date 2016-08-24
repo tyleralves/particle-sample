@@ -1,6 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "bourbon";
+@import "neat";
+@import '_shared-styles.scss';
 
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url('fonts/montserrat-thin-webfont.woff2') format('woff2');
+}
 
-#test {
-  color: red;
-  font-size: 15px;
+html {
+  width: 100%;
+}
+
+body {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+p, span, a, ul, li, button, input, label {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+
+.ditem-data {
+  cursor: pointer;
+}
+
+.dinfo-data {
+  vertical-align: top;
+}
+
+#dl-container {
+  position: fixed;
+  padding: 20px 35px;
+  width: 100%;
+}
+
+h1, h2, h3, h3>span {
+  font-family: 'Montserrat-Thin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+h4, h5, h6 {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.modal-trigger {
+  color: $spark-blue;
+}
+
+.loading-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45vh;
+  width: 100%;
+}
+
+.modal-loading-container {
+  top: 55%;
+}
+
+.load-icon {
+  display: inline-block;
+  font-size: 5em;
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
+  -webkit-transform-origin:50% 48.3%;
+  -moz-transform-origin:50% 48.3%;
+  -ms-transform-origin:50% 48.3%;
+  -o-transform-origin:50% 48.3%;
+  transform-origin: 50% 48.3%;
+}
+@-moz-keyframes spin { 100% {
+  -moz-transform:rotate(360deg);
+}
+}
+@-webkit-keyframes spin { 100% {
+  -webkit-transform:rotate(360deg);
+}
+}
+@keyframes spin { 100% {
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg);
+}
 }
